@@ -19,6 +19,7 @@ Telegram account
 ============================================================
 
 📁 **Cấu trúc thư mục**
+CCTV-Frigate-AI/
 
 ├─ docker-compose.yml
 
@@ -100,6 +101,8 @@ http://192.168.1.50:5000
 📌 KHÔNG gõ trong Terminal
 
 📌 Gõ vào trình duyệt web
+
+============================================================
 
 **TẠO TELEGRAM BOT**
 
