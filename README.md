@@ -159,3 +159,41 @@ Terminal log:
 📸 Đã gửi Telegram (clip image)
 
 ============================================================
+
+**RESTART FRIGATE (khởi động lại nếu lỗi)**
+
+cd CCTV-Frigate-AI
+
+docker-compose down
+
+docker-compose up -d
+
+⏳ Đợi 30–40 giây
+
+============================================================
+
+**Lệnh xem container thuộc project docker-compose
+**
+docker-compose ps
+
+(chạy trong thư mục có docker-compose.yml)
+
+**Lệnh Tắt 1 container cụ thể**
+
+docker stop frigate
+
+**Hoặc nhiều container:**
+
+docker stop frigate mosquitto
+
+**Tắt TOÀN BỘ docker-compose**
+📍 Chạy trong thư mục docker-compose.yml
+
+docker-compose down
+
+➡️ Tắt tất cả container + network
+
+**Tắt nhưng GIỮ DATA**
+
+docker-compose stop
+
