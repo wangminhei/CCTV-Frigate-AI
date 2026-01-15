@@ -1,0 +1,35 @@
+mqtt:
+  enabled: true
+  host: mosquitto
+  port: 1883
+  topic_prefix: frigate
+
+detectors:
+  cpu1:
+    type: cpu
+
+objects:
+  track:
+    - person
+
+cameras:
+  cam_nha_truoc:
+    ffmpeg:
+      inputs:
+        - path: rtsp://admin:admin123@192.168.1.213:554/cam/realmonitor?channel=1&subtype=1
+          roles:
+            - detect
+            - record
+
+    detect:
+      width: 640
+      height: 360
+      fps: 5
+
+    record:
+      enabled: true
+      retain:
+        days: 2
+        mode: motion
+
+version: 0.16
