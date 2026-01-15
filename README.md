@@ -174,6 +174,7 @@ docker-compose up -d
 
 **Lệnh xem container thuộc project docker-compose
 **
+
 docker-compose ps
 
 (chạy trong thư mục có docker-compose.yml)
