@@ -172,8 +172,7 @@ docker-compose up -d
 
 ============================================================
 
-**Lệnh xem container thuộc project docker-compose
-**
+**Lệnh xem container thuộc project docker-compose**
 
 docker-compose ps
 
