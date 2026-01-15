@@ -2,6 +2,8 @@
 
 Hệ thống camera AI sử dụng Frigate + Docker + MQTT, gửi thông báo kèm ảnh về Telegram khi phát hiện người, không cần thay camera cũ (Dahua / Hikvision / ONVIF).
 
+============================================================
+
 ✅ **Yêu cầu hệ thống**
 
 Ubuntu / Debian / WSL2
@@ -13,6 +15,8 @@ Node.js ≥ 18
 IP Camera hỗ trợ RTSP (Dahua đã test OK)
 
 Telegram account
+
+============================================================
 
 📁 **Cấu trúc thư mục**
 
@@ -37,6 +41,7 @@ notify/
 
 └─ node_modules/
 
+============================================================
 
 **CÀI ĐẶT DOCKER + DOCKER COMPOSE**
 
@@ -54,6 +59,7 @@ cd CCTV-Frigate-AI
 
 docker-compose up -d
 
+============================================================
 
 🌐 **Truy cập trình duyệt,nhập:** http://IP_PC:5000
 
@@ -80,6 +86,8 @@ Ví dụ kết quả:
 192.168.1.50
 
 ➡️ IP_PC = 192.168.1.50
+
+============================================================
 
 🌐 **CÁCH TRUY CẬP FRIGATE**
 
@@ -109,6 +117,8 @@ Lấy CHAT_ID:
 
 curl https://api.telegram.org/bot<BOT_TOKEN>/getUpdates
 
+============================================================
+
 **CÀI NODE.JS + THƯ VIỆN**
 
 cd ~
@@ -120,3 +130,29 @@ cd notify
 npm init -y
 
 npm install mqtt axios form-data
+
+▶️ CHẠY
+node notify.js
+
+
+Bạn sẽ thấy:
+
+✅ MQTT connected
+
+📡 Subscribed to frigate/events
+
+🧪 TEST ĐÚNG
+
+Đi trước camera 10–15 giây
+
+Telegram sẽ nhận:
+
+🚨 Thông báo
+
+📸 Ảnh CLIP JPG thật
+
+Terminal log:
+
+📸 Đã gửi Telegram (clip image)
+
+============================================================
