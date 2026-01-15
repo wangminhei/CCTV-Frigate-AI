@@ -13,10 +13,10 @@ objects:
     - person
 
 cameras:
-  cam_nha_truoc:
+  cam_A.I:
     ffmpeg:
       inputs:
-        - path: rtsp://admin:admin123@192.168.1.213:554/cam/realmonitor?channel=1&subtype=1
+        - path: rtsp://admin:admin123@192.168.1.213:554/cam/realmonitor?channel=1&subtype=1 // thay user/password và địa chỉ IP của bạn , rtsp hãng khác thì tìm google nhé.
           roles:
             - detect
             - record
